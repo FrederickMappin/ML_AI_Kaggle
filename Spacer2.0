@@ -1,0 +1,18 @@
+# Open input and output files 
+input_file = open('/Users/freddymappin/Desktop/paper working folder/Capflex/CABS-flex/input.txt', 'r')
+output_file = open('/Users/freddymappin/Desktop/paper working folder/Capflex/CABS-flex/output2.txt', 'w')
+
+# Read contents from input file
+input_str = input_file.read()
+
+# Add commas after each char
+output_str = "" 
+for char in input_str:
+    output_str += char + ","
+
+# Remove last comma and write to output file
+output_file.write(output_str[:-1]) 
+
+# Close both files
+input_file.close()
+output_file.close()
